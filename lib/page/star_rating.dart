@@ -13,24 +13,28 @@ class _StarRatingState extends State<StarRating> {
   int _rating = 0;
   @override
   Widget build(BuildContext context) {
+    // If user click the star number one
     void setRatingAsOne() {
       setState(() {
         (_rating >= 1 ? _rating = 0 : _rating = 1);
       });
     }
 
+    // If user click the star number two
     void setRatingAsTwo() {
       setState(() {
         (_rating >= 2 ? _rating = 1 : _rating = 2);
       });
     }
 
+    // If user click the star number three
     void setRatingAsThree() {
       setState(() {
         (_rating >= 3 ? _rating = 2 : _rating = 3);
       });
     }
 
+    // If user click the star number four
     void setRatingAsFour() {
       setState(() {
         (_rating >= 4 ? _rating = 3 : _rating = 4);
@@ -88,9 +92,9 @@ class _StarRatingState extends State<StarRating> {
                   Padding(
                     padding: const EdgeInsets.only(left: 100, right: 100),
                     child: Row(
-                      // tds
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
+                        // Star one
                         GestureDetector(
                           child: Icon(
                             (_rating >= 1
@@ -103,6 +107,8 @@ class _StarRatingState extends State<StarRating> {
                             setRatingAsOne();
                           },
                         ),
+
+                        // Star two
                         GestureDetector(
                           child: Icon(
                             (_rating >= 2
@@ -115,6 +121,8 @@ class _StarRatingState extends State<StarRating> {
                             setRatingAsTwo();
                           },
                         ),
+
+                        // Star three
                         GestureDetector(
                           child: Icon(
                             (_rating >= 3
@@ -127,6 +135,8 @@ class _StarRatingState extends State<StarRating> {
                             setRatingAsThree();
                           },
                         ),
+
+                        // Star four
                         GestureDetector(
                           child: Icon(
                             (_rating >= 4
